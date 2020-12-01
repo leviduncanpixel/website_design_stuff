@@ -1,0 +1,218 @@
+@import "common.css";
+
+hr {
+	margin: 2rem auto;
+	opacity: 90%;
+	width: 100%;
+	height: 2px;
+	border: none;
+	background: black;
+}
+
+:root {
+	--link-visited: indigo;
+	--link-not-visited: darkslateblue;
+	--link-on-hover: slateblue;
+	--link-active: maroon;
+	--nav-background: #222222;
+	--art-background: #eeeeee;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+main > .content {
+	margin: 10vh 0 0 0;
+}
+
+main > nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 7.5vh;
+	background: var(--nav-background);
+	z-index: 1;
+}
+
+main > nav > a.nav-logo {
+	font-size: 5.5vh;
+	padding: 1vh 2vh;
+	margin: 0 auto 0 0;
+}
+
+main > nav > a.nav-link {
+	font-size: 3.5vh;
+	padding: 2vh;
+	-ms-flex-preferred-size: 10vw;
+	flex-basis: 10vw;
+}
+
+main > nav > a {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+main > nav > a::after {
+	padding: 0.25vh 0;
+	content: "";
+	display: block;
+	width: 0;
+	height: 1vh;
+	-webkit-transition: width 0.3s ease-in-out !important;
+	transition: width 0.3s ease-in-out !important;
+}
+
+main > nav > a:visited::after {
+	background: var(--link-visited);
+}
+
+main > nav > a:visited:hover::after {
+	width: 100%;
+}
+
+main > nav > a:link::after {
+	background: var(--link-not-visited);
+}
+
+main > nav > a:link:hover::after {
+	width: 100%;
+}
+
+main > nav > a:hover::after {
+	background: var(--link-on-hover);
+}
+
+main > nav > a:hover:hover::after {
+	width: 100%;
+}
+
+main > nav > a:active::after {
+	background: var(--link-active);
+}
+
+main > nav > a:active:hover::after {
+	width: 100%;
+}
+
+main > nav > * {
+	color: #eeeeee;
+}
+
+main > .content {
+	position: relative;
+}
+
+main > .content > article.article {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: var(--art-background);
+	width: 130vh;
+	max-width: 90%;
+	height: 32vh;
+}
+
+main > .content > article.article.left {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 7.5vh auto 7.5vh 10vh;
+}
+
+main > .content > article.article.left > img.article-image {
+	margin: 0 1vh 0 0;
+	background: #999999;
+	width: auto;
+	max-width: 50%;
+	height: 100%;
+}
+
+main > .content > article.article.left > .flex-container > a.article-link {
+	margin: 2vh auto 1vh 2vh;
+}
+
+main > .content > article.article.right {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+	margin: 7.5vh 10vh 7.5vh auto;
+}
+
+main > .content > article.article.right > img.article-image {
+	margin: 0 0 0 1vh;
+	background: #999999;
+	width: auto;
+	max-width: 50%;
+	height: 100%;
+}
+
+main > .content > article.article.right > .flex-container > a.article-link {
+	margin: 2vh auto 2vh 1vh;
+}
+
+main > .content > article.article > .flex-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+main > .content > article.article > .flex-container > p.article-text {
+	margin: 1vh auto auto 2vh;
+	font-family: "Roboto", sans-serif;
+	overflow: hidden;
+	white-space: revert;
+}
+
+main > .content > article.article > .flex-container > a.article-link {
+	font-size: 1.5rem;
+	white-space: nowrap;
+	margin: 2vh auto auto 1vh;
+	font-family: "Roboto", sans-serif;
+	overflow: hidden;
+}
+
+main > .content > article.article > .flex-container > a.article-link::before {
+	content: ">>";
+}
+
+main > .content > article.article > .flex-container > a.article-link::after {
+	content: "<<";
+}
+
+main > .content > article.article > .flex-container > a.article-link:visited {
+	color: var(--link-visited);
+}
+
+main > .content > article.article > .flex-container > a.article-link:link {
+	color: var(--link-not-visited);
+}
+
+main > .content > article.article > .flex-container > a.article-link:hover {
+	color: var(--link-on-hover);
+}
+
+main > .content > article.article > .flex-container > a.article-link:active {
+	color: var(--link-active);
+}
+/*# sourceMappingURL=main.css.map */
