@@ -1,0 +1,105 @@
+@import "reset";
+@import "default";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+	--link-visited: indigo;
+	--link-not-visited: darkslateblue;
+	--link-on-hover: slateblue;
+	--link-active: maroon;
+	--nav-background: #222222;
+	--art-background: #eeeeee;
+	// albo zmienne sass'owe $nazwa-zmiennej: value
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+main {
+	& > .content {
+		margin: 10vh 0 0 0;
+	}
+
+	& > nav {
+		display: flex;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 7.5vh;
+		background: var(--nav-background);
+		z-index: 1;
+
+		& > a.nav-logo {
+			font-size: 5.5vh;
+			padding: 1vh 2vh;
+			margin: 0 auto 0 0;
+		}
+
+		& > a.nav-link {
+			font-size: 3.5vh;
+			padding: 2vh;
+			flex-basis: 10vw;
+		}
+
+		& > a {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&::after {
+				padding: 0.25vh 0;
+				content: "";
+				display: block;
+				width: 0;
+				height: 1vh;
+				transition: width 0.3s ease-in-out !important;
+			}
+
+			&:visited {
+				&::after {
+					background: var(--link-visited);
+				}
+
+				&:hover::after {
+					width: 100%;
+				}
+			}
+
+			&:link {
+				&::after {
+					background: var(--link-not-visited);
+				}
+
+				&:hover::after {
+					width: 100%;
+				}
+			}
+
+			&:hover {
+				&::after {
+					background: var(--link-on-hover);
+				}
+
+				&:hover::after {
+					width: 100%;
+				}
+			}
+
+			&:active {
+				&::after {
+					background: var(--link-active);
+				}
+
+				&:hover::after {
+					width: 100%;
+				}
+			}
+		}
+
+		& > * {
+			color: #eeeeee;
+		}
+	}
+}

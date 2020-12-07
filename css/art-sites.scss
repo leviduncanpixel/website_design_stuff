@@ -1,0 +1,28 @@
+@import "./common.scss";
+
+main {
+	display: flex;
+	justify-content: space-around;
+
+	& > .content {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 70vw;
+		justify-content: space-around;
+		padding: 4vh 4vw;
+		background: var(--art-background);
+
+		& > img {
+			width: 80%;
+			margin: 0 auto;
+			height: auto;
+		}
+
+		& > p {
+			text-align: center;
+			margin: 0 auto;
+			width: 80%;
+			font-size: 1.25rem;
+		}
+	}
+}
