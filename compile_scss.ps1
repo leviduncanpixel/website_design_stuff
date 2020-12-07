@@ -1,0 +1,1 @@
+Get-ChildItem -File | Where-Object { $_.Name -match ".*\.scss$" } | ForEach-Object { sass .\$($_.BaseName).scss .\$($_.BaseName).css --source-map --watch --color --update -I="." }
