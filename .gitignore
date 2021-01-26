@@ -1,3 +1,4 @@
 *.scss
 *.css.map
 .gitignore
+o_css
